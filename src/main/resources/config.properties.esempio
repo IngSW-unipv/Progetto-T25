@@ -1,5 +1,5 @@
 gtm.db.url=jdbc:mysql://localhost:3306/gtm_db
-gtm.db.user=nome_utente_del_db
+gtm.db.user=tuo_nome_utente_del_db
 gtm.db.password=la_tua_password_del_db
 
 
