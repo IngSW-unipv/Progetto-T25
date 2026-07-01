@@ -1,4 +1,8 @@
 package it.unipv.ingsfw.exceptions;
 
-public class InvalidReservationException {
+public class InvalidReservationException extends Exception {
+
+    public InvalidReservationException(String message) {
+        super(message);
+    }
 }
