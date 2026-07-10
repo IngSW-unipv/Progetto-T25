@@ -2,3 +2,7 @@
 
     -fx-background-image: url("background.jpeg");
 }
+
+.image-view {
+    -fx-cursor: hand;
+}
