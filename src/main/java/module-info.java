@@ -3,4 +3,6 @@ module gtm {
     requires javafx.controls;
     requires javafx.fxml;
 
+    exports it.unipv.ingsfw;
+
 }
