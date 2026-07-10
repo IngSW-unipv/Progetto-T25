@@ -16,3 +16,6 @@
     -fx-border-color: rgba(0, 242, 254, 0.8) !important;
 }
 
+.button {
+    -fx-cursor: hand;
+}
