@@ -20,6 +20,8 @@ public class PricesController {
             Parent root = FXMLLoader.load(getClass().getResource("/view/home.fxml"));
 
             Scene currentScene = ((Node) e.getSource()).getScene();
+            currentScene.setRoot(root);
+
         } catch (Exception ex) {
             ex.printStackTrace();
         }
