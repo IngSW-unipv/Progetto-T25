@@ -1,6 +1,7 @@
 .root {
 
     -fx-background-image: url("background.jpeg");
+    -fx-background-size: cover;
 }
 
 .image-view {
