@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@stile.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipv.ingsfw.controller.TeeTimeGridController">
+    <children>
+        <Label alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1280.0" style="-fx-text-fill: #00f2fe; -fx-font-weight: bold; -fx-letter-spacing: 2px;" text="PLANNING TEE TIME" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1280.0" style="-fx-text-fill: linear-gradient(to right, #ffffff 30%, #00f2fe 100%); -fx-font-weight: 900; -fx-letter-spacing: 4px;" text="GOLF TEE TIME MANAGER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+            <font>
+                <Font name="System Bold" size="46.0" />
+            </font>
+        </Label>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" />
+        <HBox alignment="BOTTOM_CENTER" prefHeight="800.0" prefWidth="1280.0" spacing="20.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button fx:id="btnBack" blendMode="COLOR_DODGE" mnemonicParsing="false" onAction="#onIndietro" prefHeight="45.0" prefWidth="300.0" style="-fx-background-color: rgba(255,255,255,0.15); -fx-text-fill: #ffffff; -fx-background-radius: 5; -fx-border-color: rgba(255,255,255,0.3); -fx-border-radius: 5;" text="TORNA ALLA DASHBOARD">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+
+        <VBox alignment="CENTER" fillWidth="false" prefHeight="800.0" prefWidth="1280.0" spacing="15.0" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="160.0">
+            <children>
+                <DatePicker fx:id="dpDataSelezionata" onAction="#onCambioData" prefHeight="45.0" prefWidth="400.0" promptText="SELEZIONA DATA PLANNING" style="-fx-text-fill: #ffffff; -fx-control-inner-background: rgba(255,255,255,0.11); -fx-background-color: rgba(255,255,255,0.15); -fx-background-radius: 5; -fx-border-color: rgba(255,255,255,0.3); -fx-border-radius: 5;" />
+
+                <TableView fx:id="tblGTMGrid" prefHeight="350.0" prefWidth="1180.0" style="-fx-background-color: rgba(255,255,255,0.05); -fx-border-color: rgba(255,255,255,0.2); -fx-border-radius: 5; -fx-background-radius: 5;">
+                    <columns>
+                        <TableColumn fx:id="colOrario" prefWidth="150.0" text="ORARIO PARTENZA" />
+                        <TableColumn fx:id="colStato" prefWidth="250.0" text="STATO OCCUPAZIONE" />
+                        <TableColumn fx:id="colDettagli" prefWidth="778.0" text="DETTAGLI PRENOTAZIONI CORRENTI" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                    <placeholder>
+                        <Label style="-fx-text-fill: #ffffff; -fx-font-weight: 900; -fx-background-color: rgba(255,0,0,0.4); -fx-background-radius: 5; -fx-padding: 10 20 10 20;" text="ERRORE NEL CARICAMENTO DELLA GRIGLIA" />
+                    </placeholder>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
