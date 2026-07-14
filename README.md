@@ -1,6 +1,6 @@
 # GTM - Golf Tee Time Manager
 
-<img src="src/main/resources/view/home_gtm.png" width="600" alt="Schermata Principale GTM" />
+<img src="src/main/resources/view/home_gtm.png" width="500" alt="Schermata Principale GTM" />
 
 **GTM (Golf Tee Time Manager)** è un'applicazione desktop per la gestione, pianificazione e automazione delle prenotazioni dei campi da golf, dei relativi percorsi di gioco (9 o 18 buche) e del noleggio delle attrezzature di supporto (golf cart, sacche di mazze e trolley).
 
