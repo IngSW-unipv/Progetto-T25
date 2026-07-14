@@ -20,3 +20,11 @@
 .button {
     -fx-cursor: hand;
 }
+
+.selected-button {
+    -fx-background-color: #00f2fe !important;
+    -fx-text-fill: #16161a !important; /* Testo scuro per massima leggibilità */
+    -fx-border-color: #00f2fe !important;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 242, 254, 0.4), 10, 0, 0, 0);
+}
+
