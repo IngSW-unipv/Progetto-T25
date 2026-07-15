@@ -11,7 +11,11 @@ import javafx.scene.control.Alert;
 
 
 /**
- * classe del controller con la schermata home del portale delle prenotazioni
+ * Controller per la schermata principale (Home Page) del sistema GTM.
+ * Smista l'utente verso gli step di prenotazione, il listino prezzi o l'area amministrativa.
+ *
+ * @author Leah Appiah
+ * @version 1.0
  */
 public class HomeController {
 
