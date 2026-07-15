@@ -8,9 +8,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+
 
 /**
- * listino prezzi
+ * Controller per la schermata del listino prezzi.
+ *
+ * @author Leah Appiah
+ * @version 1.0
  */
 public class PricesController {
 
@@ -23,7 +28,10 @@ public class PricesController {
             currentScene.setRoot(root);
 
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore");
+            alert.setHeaderText("Impossibile caricare la Home Page.");
+            alert.showAndWait();
         }
     }
 }
