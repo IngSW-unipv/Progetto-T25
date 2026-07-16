@@ -8,9 +8,12 @@ import java.util.Properties;
 import it.unipv.ingsfw.exceptions.DatabaseConnectionException;
 
 /**
- * Classe per la connessione al database
+ * Gestore della connessione al database MySQL tramite pattern Singleton.
+ * Carica le credenziali di accesso dal file di configurazione "config.properties".
+ *
+ * @author Leah Appiah
+ * @version 1.0
  */
-
 public class DbConnection {
 
     private static DbConnection instance = null; //pattern singleton per la connesione al databse, unica istanza
