@@ -6,6 +6,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * Entry point dell'applicazione Golf Tee Time Manager (GTM).
+ *
+ * @author Leah Appiah
+ * @version 1.0
+ */
 public class Main extends Application {
 
     @Override
