@@ -6,11 +6,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.Label;
 import java.io.InputStream;
 import java.util.Properties;
 
+/**
+ * Controller per la schermata di login dell'amministratore.
+ *
+ * @author Leah Appiah
+ * @version 1.0
+ */
 public class AdminLoginController {
 
     @FXML
@@ -43,7 +50,6 @@ public class AdminLoginController {
             }
         } catch (Exception ex) {
             lblError.setText("Errore di caricamento del sistema.");
-            ex.printStackTrace();
         }
     }
 
@@ -54,7 +60,10 @@ public class AdminLoginController {
             Scene currentScene = ((Node) e.getSource()).getScene();
             currentScene.setRoot(root);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore di navigazione");
+            alert.setHeaderText("Impossibile tornare alla schermata home");
+            alert.showAndWait();
         }
     }
 }
