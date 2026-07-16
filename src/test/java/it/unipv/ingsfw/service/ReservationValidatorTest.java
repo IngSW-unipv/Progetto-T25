@@ -6,6 +6,13 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Classe di test JUnit per verificare le regole di validazione delle prenotazioni
+ * implementate nella classe ReservationValidator.
+ *
+ * @author Leah Appiah
+ * @version 1.0
+ */
 public class ReservationValidatorTest {
 
     private ReservationValidator validator;
@@ -17,11 +24,13 @@ public class ReservationValidatorTest {
     }
 
 
+
     @Test
     public void testValidaDataOggiEDomani_Valide() {
         assertDoesNotThrow(() -> validator.validaData(LocalDate.now()));
         assertDoesNotThrow(() -> validator.validaData(LocalDate.now().plusDays(1)));
     }
+
 
     @Test
     public void testValidaDataNelPassato_LanciaEccezione() {
