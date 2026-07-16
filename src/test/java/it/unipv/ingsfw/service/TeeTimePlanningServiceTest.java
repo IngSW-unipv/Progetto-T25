@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Classe di test JUnit per verificare la corretta generazione e strutturazione
- * del planning giornaliero dei tee time della classe TeeTimePlanningService}.
+ * del planning giornaliero dei tee time della classe TeeTimePlanningService.
  *
  * @author Leah Appiah
  * @version 1.0
