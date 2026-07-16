@@ -14,7 +14,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 
 /**
- * classe riepilogo prenotazione
+ * Controller per la schermata di riepilogo e conferma della prenotazione (Step 7).
+ *
+ * @author Leah Appiah
+ * @version 1.0
  */
 public class Step7RiepilogoController {
 
@@ -82,7 +85,6 @@ public class Step7RiepilogoController {
             Scene currentScene = ((Node) e.getSource()).getScene();
             currentScene.setRoot(root);
         } catch (Exception ex) {
-            ex.printStackTrace();
             Alert errore = new Alert(Alert.AlertType.ERROR);
             errore.setTitle("Errore");
             errore.setHeaderText(null);
@@ -98,7 +100,10 @@ public class Step7RiepilogoController {
             Scene currentScene = ((Node) e.getSource()).getScene();
             currentScene.setRoot(root);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore di navigazione");
+            alert.setHeaderText("Impossibile tornare alla schermata dei servizi extra");
+            alert.showAndWait();
         }
     }
 }
