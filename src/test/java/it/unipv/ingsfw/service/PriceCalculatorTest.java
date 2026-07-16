@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Classe di test JUnit per verificare la correttezza dei calcoli tariffari
- * implementati nella classe PriceCalculator}.
+ * implementati nella classe PriceCalculator.
  *
  * @author Leah Appiah
  * @version 1.0
