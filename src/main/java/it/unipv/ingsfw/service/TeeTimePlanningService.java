@@ -12,9 +12,12 @@ import java.util.stream.Collectors;
 
 
 /**
- * classe per la generazione del planning per slot orario
+ * Classe per la generazione del planning giornaliero dei tee time.
+ * Suddivide la giornata in slot orari da 10 minuti, calcolando lo stato di riempimento di ciascuno.
+ *
+ * @author Leah Appiah
+ * @version 1.0
  */
-
 public class TeeTimePlanningService {
 
     private final ReservationDao dao = new ReservationDao();
@@ -22,6 +25,13 @@ public class TeeTimePlanningService {
     public TeeTimePlanningService() {
     }
 
+    /**
+     * Genera la lista completa degli slot orari per una specifica data, associandovi le prenotazioni esistenti.
+     *
+     * @param dataSelezionata La data di cui si vuole ottenere il planning.
+     * @return Una lista di TeeTimeSlot popolata con lo stato di occupazione.
+     * @throws SQLException In caso di errore durante il recupero dei dati dal database.
+     */
     public List<TeeTimeSlot> generaPlanningGiornaliero(LocalDate dataSelezionata) throws SQLException {
 
         List<TeeTimeSlot> righePlanning = new ArrayList<>();
@@ -42,6 +52,9 @@ public class TeeTimePlanningService {
 
     }
 
+    /**
+     * Mappa un singolo orario associandogli lo stato e i dettagli dei relativi giocatori prenotati.
+     */
     private TeeTimeSlot mappaSingoloSlot(String orarioSlot, List<Reservation> prenotazioniGiorno) {
 
         List<Reservation> pPerOrario = prenotazioniGiorno.stream()
