@@ -9,12 +9,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import java.time.LocalDate;
 
 
 /**
- * classe scelta orario
+ * Controller per la selezione dell'orario di prenotazione (Step 4).
+ *
+ * @author Leah Appiah
+ * @version 1.0
  */
 public class Step4OrarioController {
 
@@ -63,7 +67,10 @@ public class Step4OrarioController {
                 Scene currentScene = ((Node) e.getSource()).getScene();
                 currentScene.setRoot(root);
             } catch (Exception ex) {
-                ex.printStackTrace();
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Errore di navigazione");
+                alert.setHeaderText("Impossibile caricare la schermata di inserimento del nome");
+                alert.showAndWait();
             }
         }
     }
@@ -75,7 +82,10 @@ public class Step4OrarioController {
             Scene currentScene = ((Node) e.getSource()).getScene();
             currentScene.setRoot(root);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore di navigazione");
+            alert.setHeaderText("Impossibile tornare alla schermata di selezione della data");
+            alert.showAndWait();
         }
     }
 
