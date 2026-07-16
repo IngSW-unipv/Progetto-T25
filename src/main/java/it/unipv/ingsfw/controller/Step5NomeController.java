@@ -9,10 +9,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
 /**
- * classe scelta nome
+ * Controller per l'inserimento del nome del cliente (Step 5).
+ *
+ * @author Leah Appiah
+ * @version 1.0
  */
 public class Step5NomeController {
 
@@ -32,7 +36,10 @@ public class Step5NomeController {
             currentScene.setRoot(root);
 
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore di navigazione");
+            alert.setHeaderText("Impossibile caricare la schermata di selezione dei servizi extra");
+            alert.showAndWait();
         }
     }
 
@@ -43,7 +50,10 @@ public class Step5NomeController {
             Scene currentScene = ((Node) e.getSource()).getScene();
             currentScene.setRoot(root);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore di navigazione");
+            alert.setHeaderText("Impossibile tornare alla schermata di selezione dell'orario");
+            alert.showAndWait();
         }
     }
 }
