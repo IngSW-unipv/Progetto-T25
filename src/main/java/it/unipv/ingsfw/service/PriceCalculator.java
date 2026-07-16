@@ -1,7 +1,11 @@
 package it.unipv.ingsfw.service;
 
 /**
- * classe coi prezzi del campo da golf
+ * Classe per il calcolo delle tariffe e del totale della prenotazione.
+ * Applica i prezzi base per il percorso di gioco e somma i supplementi dell'attrezzatura a noleggio.
+ *
+ * @author Leah Appiah
+ * @version 1.0
  */
 public class PriceCalculator {
 
