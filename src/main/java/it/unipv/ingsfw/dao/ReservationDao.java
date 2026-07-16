@@ -6,9 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * classe per il pattern dao
+ * Data Access Object (DAO) per la gestione della persistenza delle prenotazioni.
+ * Si interfaccia direttamente con la tabella "reservation".
+ *
+ * @author Leah Appiah
+ * @version 1.0
  */
-
 public class ReservationDao {
 
     public ReservationDao() {
