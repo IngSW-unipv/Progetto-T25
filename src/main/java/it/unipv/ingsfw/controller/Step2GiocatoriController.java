@@ -7,12 +7,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 
 
 /**
- * classe secondo step scelta giocatore
+ * Controller per la selezione del numero di giocatori (Step 2).
+ *
+ * @author Leah Appiah
+ * @version 1.0
  */
 public class Step2GiocatoriController {
 
@@ -32,7 +36,10 @@ public class Step2GiocatoriController {
             Scene currentScene = ((Node) e.getSource()).getScene();
             currentScene.setRoot(root);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore di navigazione");
+            alert.setHeaderText("Impossibile caricare la schermata di selezione della data");
+            alert.showAndWait();
         }
     }
 
@@ -43,7 +50,10 @@ public class Step2GiocatoriController {
             Scene currentScene = ((Node) e.getSource()).getScene();
             currentScene.setRoot(root);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore di navigazione");
+            alert.setHeaderText("Impossibile tornare alla schermata di selezione delle buche");
+            alert.showAndWait();
         }
     }
 }
