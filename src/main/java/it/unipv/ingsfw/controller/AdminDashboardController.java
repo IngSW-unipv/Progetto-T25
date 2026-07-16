@@ -22,7 +22,10 @@ import java.util.List;
 
 
 /**
- * classe per la visualizzazione di tutte le prenotazioni
+ * Controller per la visualizzazione e gestione di tutte le prenotazioni (Dashboard Admin).
+ *
+ * @author Leah Appiah
+ * @version 1.0
  */
 public class AdminDashboardController {
 
@@ -81,10 +84,12 @@ public class AdminDashboardController {
             ObservableList<Reservation> obsList = FXCollections.observableArrayList(tutte);
             tblReservations.setItems(obsList);
             tblReservations.refresh();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore Dati");
+            alert.setHeaderText("Impossibile caricare le prenotazioni");
+            alert.showAndWait();
         }
     }
 
@@ -110,10 +115,11 @@ public class AdminDashboardController {
                 tblReservations.setItems(filtrate);
                 tblReservations.refresh();
 
-            } catch (SQLException ex) {
-                ex.printStackTrace();
             } catch (Exception ex) {
-                ex.printStackTrace();
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Errore Ricerca");
+                alert.setHeaderText("Impossibile filtrare le prenotazioni");
+                alert.showAndWait();
             }
         }
     }
@@ -135,15 +141,12 @@ public class AdminDashboardController {
                 ok.setContentText("Prenotazione eliminata con successo!");
                 ok.showAndWait();
 
-            } catch (SQLException ex) {
-                ex.printStackTrace();
+            } catch (Exception ex) {
                 Alert errore = new Alert(Alert.AlertType.ERROR);
                 errore.setTitle("Errore");
                 errore.setHeaderText(null);
                 errore.setContentText("Errore durante l'eliminazione dal database!");
                 errore.showAndWait();
-            } catch (Exception ex) {
-                ex.printStackTrace();
             }
         } else {
             Alert avviso = new Alert(Alert.AlertType.WARNING);
@@ -162,7 +165,10 @@ public class AdminDashboardController {
             currentScene.setRoot(root);
 
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore di navigazione");
+            alert.setHeaderText("Impossibile caricare il planning");
+            alert.showAndWait();
         }
     }
 
@@ -173,7 +179,10 @@ public class AdminDashboardController {
             Scene currentScene = ((Node) e.getSource()).getScene();
             currentScene.setRoot(root);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore di navigazione");
+            alert.setHeaderText("Impossibile tornare alla schermata home");
+            alert.showAndWait();
         }
     }
 }
