@@ -8,13 +8,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 
 
 /**
- * classe per selezionare le buche
+ * Classe che rappresenta il punto di ingresso degli step di prenotazione del circolo.
+ * Consente all'operatore di selezionare il percorso di gioco desiderato tra 9 e 18 buche.
+ *
+ * @author Leah Appiah
+ * @version 1.0
  */
-
 public class Step1BucheController {
 
     @FXML
@@ -53,7 +57,10 @@ public class Step1BucheController {
             Scene currentScene = ((Node) event.getSource()).getScene();
             currentScene.setRoot(root);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore di navigazione");
+            alert.setHeaderText("Impossibile caricare la schermata di selezione giocatori");
+            alert.showAndWait();
         }
     }
 
@@ -64,7 +71,10 @@ public class Step1BucheController {
             Scene currentScene = ((Node) event.getSource()).getScene();
             currentScene.setRoot(root);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore di navigazione");
+            alert.setHeaderText("Impossibile tornare alla schermata home");
+            alert.showAndWait();
         }
     }
 }
