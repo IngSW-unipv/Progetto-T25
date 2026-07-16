@@ -17,7 +17,10 @@ import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 
 /**
- * classe scelta extra
+ * Controller per la selezione dei servizi extra e attrezzatura (Step 6).
+ *
+ * @author Leah Appiah
+ * @version 1.0
  */
 public class Step6ExtraController {
 
@@ -69,7 +72,10 @@ public class Step6ExtraController {
             alert.setContentText(ex.getMessage());
             alert.showAndWait();
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore di navigazione");
+            alert.setHeaderText("Impossibile caricare la schermata di riepilogo");
+            alert.showAndWait();
         }
     }
 
@@ -80,7 +86,10 @@ public class Step6ExtraController {
             Scene currentScene = ((Node) e.getSource()).getScene();
             currentScene.setRoot(root);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore di navigazione");
+            alert.setHeaderText("Impossibile tornare alla schermata di inserimento del nome");
+            alert.showAndWait();
         }
     }
 }
