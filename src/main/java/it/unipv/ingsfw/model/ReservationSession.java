@@ -2,10 +2,14 @@ package it.unipv.ingsfw.model;
 
 import java.time.LocalDate;
 
-/**
- * Rappresenta la classe che mantiene i dati negli step della prenotazione
- */
 
+/**
+ * Gestisce lo stato temporaneo della prenotazione durante i vari passaggi degli step della prenotazione.
+ * Implementa il pattern Singleton per garantire una sola sessione attiva a livello globale.
+ *
+ * @author Leah Appiah
+ * @version 1.0
+ */
 public class ReservationSession {
 
     private static ReservationSession instance;
