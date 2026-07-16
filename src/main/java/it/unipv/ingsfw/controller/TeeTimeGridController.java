@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -20,7 +21,10 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * classe planning
+ * Controller per la visualizzazione del planning giornaliero dei tee time.
+ *
+ * @author Leah Appiah
+ * @version 1.0
  */
 public class TeeTimeGridController {
 
@@ -67,10 +71,11 @@ public class TeeTimeGridController {
             tblGTMGrid.setItems(righeTabella);
             tblGTMGrid.refresh();
 
-        } catch (SQLException ex) {
-            ex.printStackTrace();
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore Database");
+            alert.setHeaderText("Impossibile caricare il planning giornaliero");
+            alert.showAndWait();
         }
     }
 
@@ -81,7 +86,10 @@ public class TeeTimeGridController {
             Scene currentScene = ((Node) e.getSource()).getScene();
             currentScene.setRoot(root);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore di navigazione");
+            alert.setHeaderText("Impossibile tornare alla dashboard amministrativa");
+            alert.showAndWait();
         }
     }
 }
