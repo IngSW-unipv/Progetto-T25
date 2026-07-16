@@ -3,9 +3,12 @@ package it.unipv.ingsfw.model;
 import java.time.LocalDate;
 
 /**
- * Rappresenta la classe che contiene i dati di una prenotazione
+ * Entità del model che rappresenta una singola prenotazione per un percorso di gioco.
+ * Mantiene lo stato completo dei dettagli inseriti dall'utente e memorizzati nel database.
+ *
+ * @author Leah Appiah
+ * @version 1.0
  */
-
 public class Reservation {
 
     private int id;
