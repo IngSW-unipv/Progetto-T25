@@ -3,7 +3,13 @@ package it.unipv.ingsfw.service;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-
+/**
+ * Classe di test JUnit per verificare la correttezza dei calcoli tariffari
+ * implementati nella classe PriceCalculator}.
+ *
+ * @author Leah Appiah
+ * @version 1.0
+ */
 public class PriceCalculatorTest {
 
     @Test
