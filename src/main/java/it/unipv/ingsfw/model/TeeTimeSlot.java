@@ -1,9 +1,12 @@
 package it.unipv.ingsfw.model;
 
 /**
- * Classe per la visualizzazione dello slot del tee-time orario
+ * Classe che rappresenta un singolo slot orario (Tee Time) nel sistema.
+ * Utilizzato per popolare la griglia del planning giornaliero visibile all'amministratore.
+ *
+ * @author Leah Appiah
+ * @version 1.0
  */
-
  public class TeeTimeSlot {
 
     private final String time;
