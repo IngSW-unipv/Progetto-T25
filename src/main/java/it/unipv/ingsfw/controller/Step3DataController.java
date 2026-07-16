@@ -15,7 +15,10 @@ import javafx.scene.control.DatePicker;
 import java.time.LocalDate;
 
 /**
- * classe scelta data
+ * Controller per la selezione della data di prenotazione (Step 3).
+ *
+ * @author Leah Appiah
+ * @version 1.0
  */
 public class Step3DataController {
 
@@ -54,7 +57,10 @@ public class Step3DataController {
             alert.setContentText(ex.getMessage());
             alert.showAndWait();
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore di navigazione");
+            alert.setHeaderText("Impossibile caricare la schermata di selezione dell'orario");
+            alert.showAndWait();
         }
     }
 
@@ -65,7 +71,10 @@ public class Step3DataController {
             Scene currentScene = ((Node) event.getSource()).getScene();
             currentScene.setRoot(root);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore di navigazione");
+            alert.setHeaderText("Impossibile tornare alla schermata di selezione giocatori");
+            alert.showAndWait();
         }
     }
 }
