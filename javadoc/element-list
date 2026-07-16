@@ -1,0 +1,7 @@
+module:gtm
+it.unipv.ingsfw
+it.unipv.ingsfw.controller
+it.unipv.ingsfw.dao
+it.unipv.ingsfw.exceptions
+it.unipv.ingsfw.model
+it.unipv.ingsfw.service
